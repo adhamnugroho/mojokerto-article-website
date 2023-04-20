@@ -24,6 +24,26 @@ a {
   text-decoration: none;
 }
 
+h2,
+h3 {
+  border-bottom: 1px double #000;
+}
+
+article p {
+  margin-top: 2%;
+  text-indent: 5%;
+  text-align: justify;
+}
+
+figure {
+  margin: 2% 0;
+  text-align: center;
+}
+
+article:not(.pendahuluan) {
+  margin-top: 3%;
+}
+
 header {
   width: 100%;
   display: flex;
@@ -33,6 +53,7 @@ header {
   top: 0;
   left: 0;
   background-color: #fff;
+  border-bottom: 1px solid #000;
 }
 
 header nav {
@@ -62,4 +83,201 @@ nav li a:hover {
 
 .humberger-menu {
   display: none;
+}
+
+main {
+  padding: 2.5% 2%;
+}
+
+main .container-content-aside {
+  width: 100%;
+  display: flex;
+}
+
+#content {
+  width: 70%;
+}
+
+.pendahuluan {
+  width: 100%;
+}
+
+.pendahuluan p {
+  text-align: justify;
+}
+
+aside {
+  width: 28%;
+  margin: 3% 2%;
+}
+
+aside article {
+  border: 1px solid #000;
+  background-color: aliceblue;
+  padding: 3% 2%;
+}
+
+aside figure {
+  border-bottom: 3px double #000;
+}
+
+aside img {
+  width: 100%;
+}
+
+aside table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+aside table tr,
+aside table td {
+  border: 1px solid #000;
+}
+
+table td {
+  padding: 2%;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  margin: 2% 0 0 0;
+  padding: 2% 0;
+  border-top: 1px solid #000;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+/* Responsive breakpoints */
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1.3em;
+  }
+
+  header {
+    -webkit-transition: all 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transition: all 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    min-height: 0px;
+    overflow: hidden;
+  }
+
+  header nav {
+    position: absolute;
+    width: 100%;
+    transform: translateX(0);
+    background-color: #fff;
+    border-top: 2px solid #71706d;
+    margin: 8% 0;
+  }
+
+  header nav ul {
+    flex-direction: column;
+  }
+
+  header nav ul li {
+    margin: 1% 0;
+    padding: 1% 0;
+    border-bottom: 2px solid #71706d;
+  }
+
+  header nav ul li a {
+    font-size: 1em;
+    margin-left: 1.5%;
+  }
+
+  header .humberger-menu {
+    display: inline-block;
+    position: relative;
+  }
+
+  .humberger-menu input {
+    width: 100%;
+    height: 2.4em;
+    position: absolute;
+    opacity: 0;
+    z-index: 5;
+    cursor: pointer;
+  }
+
+  .d-none {
+    display: none;
+  }
+
+  .nav-open {
+    min-height: 210px;
+  }
+
+  main .container-content-aside {
+    width: 100%;
+    display: inline-block;
+  }
+
+  #content {
+    width: 100%;
+  }
+
+  aside {
+    width: 50%;
+    margin: 3% auto;
+  }
+
+  aside p {
+    text-indent: 0;
+  }
+
+  aside table td {
+    font-size: 0.9em;
+  }
+
+  footer {
+    font-size: 0.95em;
+  }
+}
+
+/* handphone */
+@media screen and (max-width: 576px) {
+  figure {
+    margin: 5%;
+  }
+  article img {
+    margin: 2% 0;
+  }
+
+  footer {
+    font-size: 0.8em;
+  }
+}
+
+/* small handphone */
+@media screen and (max-width: 350px) {
+  header nav {
+    margin-top: 12%;
+  }
+
+  article img:not([alt*="Adham"]) {
+    width: 40%;
+  }
+
+  article img[alt*="Spiritus"] {
+    width: 60%;
+  }
+
+  aside {
+    width: 70%;
+  }
+
+  aside table td {
+    font-size: 0.8em;
+  }
+
+  footer {
+    font-size: 0.7em;
+    padding: 5% 0;
+  }
 }
